@@ -1,0 +1,42 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template media_eduplay/player
+
+    Responsive iframe with the official EduPlay player, plus a fallback link.
+
+    Context variables required for this template:
+    * embedurl - Official embed URL
+    * canonicalurl - Canonical video URL
+    * title - Accessible iframe title
+    * linktext - Text of the fallback link
+
+    Example context (json):
+    {
+        "embedurl": "https://eduplay.rnp.br/app/video/embed/353479",
+        "canonicalurl": "https://eduplay.rnp.br/app/video/353479",
+        "title": "EduPlay video",
+        "linktext": "Open in EduPlay"
+    }
+}}
+<span class="mediaplugin mediaplugin_eduplay d-block">
+    <span class="media-eduplay-frame d-block">
+        <iframe src="{{embedurl}}" title="{{title}}" loading="lazy"
+                allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </span>
+    <a class="media-eduplay-link" href="{{canonicalurl}}">{{linktext}}</a>
+</span>
