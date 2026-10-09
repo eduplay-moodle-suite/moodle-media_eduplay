@@ -14,19 +14,20 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace media_eduplay;
+defined('MOODLE_INTERNAL') || die();
 
 use local_eduplay\local\url_parser;
-use moodle_url;
 
 /**
  * Media player that embeds the official EduPlay player in an iframe.
+ *
+ * The class name (media_eduplay_plugin) is the one the Moodle media manager looks for.
  *
  * @package    media_eduplay
  * @copyright  2026 Kelson da Costa Medeiros <kelsoncm@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class plugin extends \core_media_player_external {
+class media_eduplay_plugin extends core_media_player_external {
     /**
      * Render the official player for a canonical EduPlay URL.
      *
