@@ -23,7 +23,7 @@ namespace media_eduplay;
  * @category   test
  * @copyright  2026 Kelson da Costa Medeiros <kelsoncm@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @covers     \media_eduplay\plugin
+ * @covers     \media_eduplay_plugin
  */
 final class plugin_test extends \advanced_testcase {
     /**
@@ -31,7 +31,7 @@ final class plugin_test extends \advanced_testcase {
      */
     public function test_canonical_url_is_embedded(): void {
         $this->resetAfterTest();
-        $player = new plugin();
+        $player = new \media_eduplay_plugin();
         $html = $player->embed(
             [new \moodle_url('https://eduplay.rnp.br/app/video/353479')],
             'My lesson',
@@ -53,7 +53,7 @@ final class plugin_test extends \advanced_testcase {
      */
     public function test_unsupported_url_is_not_embedded(string $url): void {
         $this->resetAfterTest();
-        $player = new plugin();
+        $player = new \media_eduplay_plugin();
         $html = $player->embed([new \moodle_url($url)], '', 0, 0, []);
         $this->assertStringNotContainsString('<iframe', $html);
     }
@@ -73,10 +73,26 @@ final class plugin_test extends \advanced_testcase {
     }
 
     /**
+     * The Moodle media manager loads the player (media_eduplay_plugin) and embeds a canonical link once enabled.
+     */
+    public function test_media_manager_embeds_when_enabled(): void {
+        global $PAGE;
+        $this->resetAfterTest();
+        \core\plugininfo\media::enable_plugin('eduplay', 1);
+        \core_media_manager::reset_caches();
+        $PAGE->set_url('/');
+        $manager = \core_media_manager::instance();
+        $url = new \moodle_url('https://eduplay.rnp.br/app/video/353479');
+        $this->assertTrue($manager->can_embed_url($url));
+        $this->assertStringContainsString('/app/video/embed/353479', $manager->embed_url($url, 'Lesson'));
+        $this->assertFalse($manager->can_embed_url(new \moodle_url('https://evil.example/app/video/1')));
+    }
+
+    /**
      * The player advertises the marker used by Moodle to pre-filter text.
      */
     public function test_markers_and_rank(): void {
-        $player = new plugin();
+        $player = new \media_eduplay_plugin();
         $this->assertSame(['eduplay.rnp.br/app/video/'], $player->get_embeddable_markers());
         $this->assertGreaterThan(1000, $player->get_rank());
     }
