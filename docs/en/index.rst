@@ -22,8 +22,8 @@ See the whole flow
 .. raw:: html
 
    <video controls preload="none" style="width:100%;max-width:960px" aria-label="See the whole flow">
-     <source src="https://eduplay-moodle-suite.github.io/media/tiny.mp4" type="video/mp4">
-     <a href="https://eduplay-moodle-suite.github.io/media/tiny.mp4">MP4</a>
+     <source src="https://eduplay-moodle-suite.github.io/media/tiny.en.mp4" type="video/mp4">
+     <a href="https://eduplay-moodle-suite.github.io/media/tiny.en.mp4">MP4</a>
    </video>
 
 *Insert with the editor button, save, and the player appears (Moodle interface in English).*
