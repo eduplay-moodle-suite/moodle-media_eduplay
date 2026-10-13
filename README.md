@@ -20,6 +20,13 @@ Media player do Moodle da [EduPlay Moodle Suite](https://github.com/eduplay-mood
 
 Instale o `local_eduplay` em `local/eduplay` e depois este repositório em `media/player/eduplay` (prefixo `public/` no Moodle 5.1+), e acesse *Administração do site > Notificações*.
 
+## Support, external service and privacy / Suporte, serviço externo e privacidade
+
+- Issue tracker / Rastreador de issues: <https://github.com/eduplay-moodle-suite/moodle-media_eduplay/issues>
+- Documentation / Documentação: <https://eduplay-moodle-suite.github.io/moodle-media_eduplay/>
+- External service / Serviço externo: [EduPlay](https://eduplay.rnp.br/) (public videos; no account, API key or payment required / vídeos públicos; sem conta, chave de API ou pagamento). See the Privacy API metadata of this plugin / Veja os metadados da Privacy API deste plugin.
+- Translations / Traduções: only English is shipped; other languages go through AMOS / o pacote traz só inglês; outros idiomas via AMOS.
+
 ## License / Licença
 
 GNU GPL v3 or later. See [LICENSE](LICENSE).

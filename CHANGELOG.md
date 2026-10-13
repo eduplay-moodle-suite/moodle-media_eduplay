@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 - 2026-10-13
+
+- Marketplace guidelines audit: removed `lang/pt_br` from the package (only English is shipped; translations go through AMOS).
+- README: issue tracker, documentation, external service and privacy.
+- Privacy API now declares the external EduPlay location the viewer's browser loads the player from.
+
 ## 0.2.0 - 2026-10-09
 
 - Maturity raised from ALPHA to BETA.

@@ -27,4 +27,5 @@ defined('MOODLE_INTERNAL') || die();
 $string['iframetitle'] = 'EduPlay video';
 $string['openineduplay'] = 'Open in EduPlay';
 $string['pluginname'] = 'EduPlay';
-$string['privacy:metadata'] = 'The EduPlay media player plugin does not store any personal data. The viewer\'s browser loads the official EduPlay player directly from EduPlay.';
+$string['privacy:metadata:eduplay'] = 'The viewer\'s browser loads the official EduPlay player (iframe) directly from the EduPlay service (eduplay.rnp.br). Moodle sends nothing to EduPlay and stores no personal data.';
+$string['privacy:metadata:eduplay:ipaddress'] = 'The IP address and browser data of the viewer, sent by the browser when it loads the player.';
