@@ -16,17 +16,17 @@ moodle-media_eduplay
 * **Accessible and responsive.** 16:9 on any screen, a meaningful title for screen readers, no autoplay and a plain link to the video as a fallback.
 * **Safe by design.** Only genuine EduPlay video links become a player; everything else stays a normal link.
 
-See the whole flow
-------------------
+See it in 20 seconds
+--------------------
 
 .. raw:: html
 
-   <video controls preload="none" style="width:100%;max-width:960px" aria-label="See the whole flow">
-     <source src="https://eduplay-moodle-suite.github.io/media/tiny.en.mp4" type="video/mp4">
-     <a href="https://eduplay-moodle-suite.github.io/media/tiny.en.mp4">MP4</a>
+   <video controls preload="none" style="width:100%;max-width:960px" aria-label="See it in 20 seconds">
+     <source src="https://eduplay-moodle-suite.github.io/media/media.en.mp4" type="video/mp4">
+     <a href="https://eduplay-moodle-suite.github.io/media/media.en.mp4">MP4</a>
    </video>
 
-*Insert with the editor button, save, and the player appears (Moodle interface in English).*
+*Paste the link straight into the text, save, and the player appears (Moodle interface in English).*
 
 Start in three steps
 --------------------
